@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ReactMapGL, { Marker } from 'react-map-gl'
 import PolylineOverlay from './PolylineOverlay'
 
+const tok = "pk.eyJ1IjoibWxhbGxhaSIsImEiOiJja21tNTZxYmMwanZhMndyemJ0N3B4N3U3In0.UPXynjoWzZBmtGha0P_HsA"
 const MainMap = ({ markers = [], onChangeMarker }) => {
     const [loading, setLoading] = useState(false)
 
@@ -36,7 +37,7 @@ const MainMap = ({ markers = [], onChangeMarker }) => {
                         handleClick(event)
                     }
                 }}
-                mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+                mapboxApiAccessToken={tok}
                 onViewportChange={viewport => {
                     setViewport(viewport)
                 }}
